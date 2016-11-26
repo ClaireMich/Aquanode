@@ -14,6 +14,11 @@
         <!-- Font Awesome -->
         {!!HTML::style('fonts/font-awesome/css/font-awesome.min.css')!!}
 
+        <!-- Datatables -->
+        {!!Html::style('//cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css')!!} 
+        {!!Html::style('DataTables/responsive.bootstrap.min.css')!!}
+        {!!Html::style('//cdn.datatables.net/1.10.12/css/dataTables.bootstrap4.min.css')!!}
+  
         
     </head>
     <body>
@@ -33,7 +38,7 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">Nav Element </a></li>
+                <li><a href="/comments">Comments </a></li>
                 <li><a href="#">Nav Element</a></li>
                 <li><a href="#">Nav Element</a></li>
               </ul>
@@ -81,6 +86,10 @@
     {!!Html::script('js/app.js')!!}
     <!-- Core Init -->
     {!!Html::script('js/app/core.js')!!}
+    <!-- Datatables -->
+    {!!Html::script('//cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js')!!}
+    {!!Html::script('DataTables/dataTables.responsive.min.js')!!}
+    {!!Html::script('DataTables/responsive.bootstrap.js')!!}
 
     <!-- Noty -->
     {!!Html::script('js/noty/packaged/jquery.noty.packaged.min.js')!!}

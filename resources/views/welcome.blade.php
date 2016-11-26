@@ -13,7 +13,7 @@
                     <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
                       {!!Form::text('name', ['class'=>'form-control', 'id' => 'name', 
                       'placeholder'=>'Name'])!!}
-                      <span class='pull-right control-label hide' id='error_name'>Error</span>
+                      <span class='error pull-right control-label hide' id='error_name'>Error</span>
                     </div>                    
                 </div>
                 <div class="form-group phone">
@@ -21,7 +21,7 @@
                     <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
                       {!!Form::text('phone', ['class'=>'form-control', 'id' => 'phone', 
                       'placeholder'=>'Phone'])!!}
-                      <span class='pull-right control-label hide' id='error_phone'>Error</span>
+                      <span class='error pull-right control-label hide' id='error_phone'>Error</span>
                     </div>
                 </div>
                 <div class="form-group address">
@@ -29,7 +29,7 @@
                     <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
                       {!!Form::text('address', ['class'=>'form-control', 'id' => 'address', 
                       'placeholder'=>'Address'])!!}
-                      <span class='pull-right control-label hide' id='error_address'>Error</span>
+                      <span class='error pull-right control-label hide' id='error_address'>Error</span>
                     </div>
                 </div>
                 <div class="form-group email">
@@ -37,7 +37,7 @@
                     <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
                       {!!Form::text('email', ['class'=>'form-control', 'id' => 'email', 
                       'placeholder'=>'Email'])!!}
-                      <span class='pull-right control-label hide' id='error_email'>Error</span>
+                      <span class='error pull-right control-label hide' id='error_email'>Error</span>
                     </div>
                 </div>
                 <div class="form-group password">
@@ -45,7 +45,7 @@
                     <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
                       {!!Form::password('password', ['class'=>'form-control', 'id' => 'password', 
                       'placeholder'=>'Password'])!!}
-                      <span class='pull-right control-label hide' id='error_password'>Error</span>
+                      <span class='error pull-right control-label hide' id='error_password'>Error</span>
                     </div>
                 </div>
                 <div class="form-group comments">
@@ -53,7 +53,7 @@
                     <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
                       {!!Form::textarea('comments', ['class'=>'form-control', 'id' => 'comments', 
                       'placeholder'=>'Comments'])!!}
-                      <span class='pull-right control-label hide' id='error_comments'>Error</span>
+                      <span class='error pull-right control-label hide' id='error_comments'>Error</span>
                     </div>
                 </div>
                 <div class="form-group">

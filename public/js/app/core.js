@@ -4,6 +4,7 @@ var Core = {
 
         Core.initForms();
         Core.initModals();
+        Core.initTables();
 
         (function($) {
 
@@ -33,7 +34,25 @@ var Core = {
         })(jQuery);
     },
 
-    
+        initTables: function()
+    {
+        $('#datatable-responsive').DataTable({
+            processing: true,
+            serverSide: true,
+            responsive: true,
+            ajax: 'anyData',
+            columns: [
+                { data: 'name', name: 'name' },
+                { data: 'phone', name: 'phone' },
+                { data: 'address', name: 'address' },
+                { data: 'email', name: 'email' },
+                { data: 'comments', name: 'comments' }
+            ],
+            "initComplete": function () {
+                var api = this.api();
+            }
+        });
+    },
 
   /* App Initialization Functions */
 
@@ -52,7 +71,7 @@ var Core = {
         {
             e.preventDefault();
             $('.form-group').removeClass('has-error');
-            $('.pull-right span').addClass('hide');
+            $('.error').addClass('hide');
             form=$('#formCreateUser');
             Core.ajaxFormSubmit(form);
         });
@@ -71,8 +90,6 @@ var Core = {
             cache:          false,
             processData:    false,
             success: function(response) {
-                console.log(response);
-                var showMsg = true;
 
                 if (response.type != 'Error') {
                     if(response.data!=undefined && response.data!='' )
@@ -81,15 +98,7 @@ var Core = {
                     }
                     document.getElementById(form.attr('id')).reset();
                 }
-                else
-                {
-                    showMsg=false;
-                }
-
-                if (showMsg) {
-                    Core.showMessage(response.message, response.type);
-                }
-                Core.openCloseModal();
+                Core.showMessage(response.message, response.type);
             },
             error: function(response)
             {
@@ -105,7 +114,7 @@ var Core = {
                                     
                         }
                         
-                        if(json.email!=undefined)
+                        if(json.email!=undefined && json.email!='The email field is required.')
                         {
                             $( ".email" ).addClass('has-error');
                             document.getElementById('error_email').innerHTML=json.email[0];

@@ -16,3 +16,9 @@ Route::get('/', function () {
 });
 
 Route::post('createUser', 'AdminController@createUser');
+
+Route::get('comments', 'AdminController@comments');
+
+Route::get('anyData', 'AdminController@anyData');
+
+Route::get('pdf', 'AdminController@pdf');
