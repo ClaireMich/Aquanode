@@ -56,11 +56,17 @@
                       <span class='error pull-right control-label hide' id='error_comments'>Error</span>
                     </div>
                 </div>
+                <div class="form-group g-recaptcha-response pull-right">
+                    <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10">
+                        {!! app('captcha')->display(); !!}
+                        <span class='error pull-right control-label hide' id='error_g-recaptcha-response'>Error</span>
+                    </div>
+                </div>
                 <div class="form-group">
                     <div class="col-sm-offset-4 col-md-offset-4  col-lg-offset-4  col-sm-8 col-md-8 col-lg-8">
                       {!! Form::submit('Create', ['id'=>'createUser', 'class'=>'btn btn-lg pull-right btn-primary']) !!}
                     </div>
-                  </div>
+                </div>
         {!!Form::close()!!}  
     </div>
 @stop

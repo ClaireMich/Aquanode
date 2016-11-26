@@ -10,7 +10,8 @@
         "laravelcollective/html": "^5.3.0",
         "yajra/laravel-datatables-oracle": "^6.21",
         "regulus/formation": "1.2.*",
-        "barryvdh/laravel-dompdf": "^0.7.0"
+        "barryvdh/laravel-dompdf": "^0.7.0",
+        "anhskohbo/no-captcha": "^2.1"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

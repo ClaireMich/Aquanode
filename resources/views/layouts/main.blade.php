@@ -93,6 +93,9 @@
 
     <!-- Noty -->
     {!!Html::script('js/noty/packaged/jquery.noty.packaged.min.js')!!}
+
+    <!-- ReCaptcha -->
+    {!!Html::script('https://www.google.com/recaptcha/api.js')!!}
     <script type="text/javascript">
       var baseUrl   = "{{ url('') }}";
       var apiUrl    = "{{ url('api') }}";

@@ -20,6 +20,7 @@ class AdminController extends ApiController
 			'email'			=> 'required|unique:users|email',
 			'password'		=> 'required',
 			'comments'		=> 'required',
+			'g-recaptcha-response' => 'required|captcha'
         ]);
         User::create($request->all());
         Mail::send('comments.emails.contact', $request->all(), function($msj){
