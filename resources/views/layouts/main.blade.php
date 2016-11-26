@@ -11,6 +11,8 @@
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
         <!-- Bootstrap -->
         {!!Html::style('css/app.css')!!}
+        <!-- Font Awesome -->
+        {!!HTML::style('fonts/font-awesome/css/font-awesome.min.css')!!}
 
         
     </head>
@@ -25,13 +27,13 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="#">Brand</a>
+              <a class="navbar-brand" href="#"><img src="{{asset('images/logo.jpg')}}"></a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul class="nav navbar-nav navbar-right">
-                <li class="active"><a href="#">Nav Element <span class="sr-only">(current)</span></a></li>
+                <li><a href="#">Nav Element </a></li>
                 <li><a href="#">Nav Element</a></li>
                 <li><a href="#">Nav Element</a></li>
               </ul>
@@ -46,11 +48,30 @@
         </div>
 
         <div id="footer">
-          <div class="container">
-            <ul class="nav navbar-nav navbar-right">
-                <li class="active"><a href="#">Nav Element <span class="sr-only">(current)</span></a></li>
+          <div class="container" >
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#"><img src="{{asset('images/logo.jpg')}}"></a>
+                <ul class=" list-inline pull-right visible-xs">
+                
+                    <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+            
+            <ul class="nav navbar-nav navbar-left hidden-xs">
+                
+                <li><a href="#">Nav Element </a></li>
                 <li><a href="#">Nav Element</a></li>
                 <li><a href="#">Nav Element</a></li>
+            </ul>
+            <ul class=" list-inline pull-right hidden-xs">
+                
+                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
             </ul>
           </div>
         </div>

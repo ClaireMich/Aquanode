@@ -51,6 +51,8 @@ var Core = {
         $("#createUser").off('click').on('click', function(e)
         {
             e.preventDefault();
+            $('.form-group').removeClass('has-error');
+            $('.pull-right span').addClass('hide');
             form=$('#formCreateUser');
             Core.ajaxFormSubmit(form);
         });
@@ -91,14 +93,25 @@ var Core = {
             },
             error: function(response)
             {
-                console.log(response);
+                console.log(response.responseText);
                 if(response.status==422)
                 {
                     if (response.responseText != null){
                         var json = JSON.parse(response.responseText);
+                        for(var key in json) {     
+                            $( "."+key ).addClass('has-error');
+                            document.getElementById('error_'+key).innerHTML=json[key];
+                            $( "#error_"+key ).removeClass('hide');
+                                    
+                        }
+                        
                         if(json.email!=undefined)
-                            Core.showMessage(json.email[0], 'error');
-                            
+                        {
+                            $( ".email" ).addClass('has-error');
+                            document.getElementById('error_email').innerHTML=json.email[0];
+                            $( "#error_email" ).removeClass('hide');
+                            Core.showMessage(json.email[0], 'error');                          
+                        }
                     }
                     Core.showMessage('Please check all the fields are completed correctly', 'error');
                 }
